@@ -1,0 +1,101 @@
+{
+  "translation_date": "2026-10-25",
+  "documents": [
+    {
+      "name": "util",
+      "translated_file": "util.zh-CN.md",
+      "code_blocks_preserved": 17,
+      "source_headings": 12,
+      "translated_headings": 12,
+      "sha256": "43bc5e46bd875380eb14298739f46db9324fac4a057e7b244b254f299d68cfd6"
+    },
+    {
+      "name": "syscall",
+      "translated_file": "syscall.zh-CN.md",
+      "code_blocks_preserved": 5,
+      "source_headings": 7,
+      "translated_headings": 7,
+      "sha256": "604123f706fda4dfccd3fd9c6d98a9760c7613780c8f6f277969dfe01b44c12b"
+    },
+    {
+      "name": "pgtbl",
+      "translated_file": "pgtbl.zh-CN.md",
+      "code_blocks_preserved": 4,
+      "source_headings": 8,
+      "translated_headings": 8,
+      "sha256": "4301024e20459a95162778092403ccc2dd12f6b2584fcdc37847ca8677b256e4"
+    },
+    {
+      "name": "traps",
+      "translated_file": "traps.zh-CN.md",
+      "code_blocks_preserved": 13,
+      "source_headings": 10,
+      "translated_headings": 10,
+      "sha256": "df84d975fc347abda8fe4108eac0e7d72d4def1c734692b6138806c2b4bfaa5d"
+    },
+    {
+      "name": "cow",
+      "translated_file": "cow.zh-CN.md",
+      "code_blocks_preserved": 5,
+      "source_headings": 8,
+      "translated_headings": 8,
+      "sha256": "d3ec2e7079d07926c41c6cc6547805e5aafe3f72daf2ffc902f9dd77893600cc"
+    },
+    {
+      "name": "thread",
+      "translated_file": "thread.zh-CN.md",
+      "code_blocks_preserved": 15,
+      "source_headings": 8,
+      "translated_headings": 8,
+      "sha256": "8a937d12441be1932ec420a4e634d30c802eff0ea6c19e3cef903aaa398fda8d"
+    },
+    {
+      "name": "net",
+      "translated_file": "net.zh-CN.md",
+      "code_blocks_preserved": 6,
+      "source_headings": 8,
+      "translated_headings": 8,
+      "sha256": "da2d1bdac20fcad06dc24e516de68e1d2b0005fd5a286e28d49fd2cd80820e32"
+    },
+    {
+      "name": "lock",
+      "translated_file": "lock.zh-CN.md",
+      "code_blocks_preserved": 7,
+      "source_headings": 7,
+      "translated_headings": 7,
+      "sha256": "58c6176214662686eefae8fb4c864383fb3787a6c0c34a7ba4bd33cb213c956e"
+    },
+    {
+      "name": "fs",
+      "translated_file": "fs.zh-CN.md",
+      "code_blocks_preserved": 7,
+      "source_headings": 12,
+      "translated_headings": 12,
+      "sha256": "94eec6b0154deefeaea0cce39fd9851ac6ae6624dc8f2a3ae3228ea9fdc0cf90"
+    },
+    {
+      "name": "mmap",
+      "translated_file": "mmap.zh-CN.md",
+      "code_blocks_preserved": 5,
+      "source_headings": 5,
+      "translated_headings": 5,
+      "sha256": "c2d3fb4ae22249304f2fa2a57064efb2051b2eeb475b36302dceedc7261a8ae5"
+    },
+    {
+      "name": "tools",
+      "translated_file": "tools.zh-CN.md",
+      "code_blocks_preserved": 14,
+      "source_headings": 10,
+      "translated_headings": 10,
+      "sha256": "78327e12d55b09b5653c858fe2373eb95912e452384df9fc1f35c603df1f13e4"
+    },
+    {
+      "name": "guidance",
+      "translated_file": "guidance.zh-CN.md",
+      "code_blocks_preserved": 0,
+      "source_headings": 3,
+      "translated_headings": 3,
+      "sha256": "6e24a88c40a8b536e3488949c1711bb7b892d4f38ff3750d35b7b76271bd423d"
+    }
+  ]
+}

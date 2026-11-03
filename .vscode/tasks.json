@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "xv6: run", "type": "shell", "command": "make qemu", "problemMatcher": ["$gcc"]},
+    {"label": "xv6: debug server", "type": "shell", "command": "make CPUS=1 GDBPORT=26000 qemu-gdb", "problemMatcher": ["$gcc"]},
+    {"label": "xv6: grade", "type": "shell", "command": "make grade", "problemMatcher": []}
+  ]
+}

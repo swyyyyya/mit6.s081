@@ -1,0 +1,258 @@
+<html><head><meta charset="utf-8"/>
+<title>
+6.S081 / Fall 2021
+</title>
+<meta content="no-cache" http-equiv="pragma"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="../assets/f336a65d7684.css" media="screen" rel="stylesheet"/>
+<link href="../assets/cff30969aeb1.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/3da2124c9398.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://pdos.csail.mit.edu/6.828/2021/index.html">6.S081: Operating System Engineering</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+	    <li><a href="https://pdos.csail.mit.edu/6.828/2021/schedule.html">Schedule</a></li>
+	    <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Class<span class="caret"></span></a>
+	      <ul class="dropdown-menu" role="menu">
+                <li><a href="https://pdos.csail.mit.edu/6.828/2021/overview.html">Overview</a></li>
+                <li><a href="https://pdos.csail.mit.edu/6.828/2021/general.html">Administrivia</a></li>
+		<li><a href="https://6828.scripts.mit.edu/2021/handin.py/">Handin website</a>
+		</li><li><a href="http://pdos.csail.mit.edu/6.828/2020">6.S081 2020</a></li>
+	      </ul>
+	    </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Labs<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+		<li><a href="tools.html">Tools</a></li>
+		<li><a href="guidance.html">Guidance</a></li>
+                <li><a href="util.html">Lab Utilities</a></li>
+		<li><a href="syscall.html">Lab System calls</a></li>
+		<li><a href="pgtbl.html">Lab Page tables</a></li>
+		<li><a href="traps.html">Lab Traps</a></li>
+		<li><a href="cow.html">Lab Copy on-write</a></li>
+		<li><a href="thread.html">Lab Multithreading</a></li>
+		<li><a href="net.html">Lab network driver</a></li>
+		<li><a href="lock.html">Lab Lock</a></li>
+		<li><a href="fs.html">Lab File system</a></li>
+		<li><a href="mmap.html">Lab mmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">xv6<span class="caret"></span></a>
+	      <ul class="dropdown-menu" role="menu">
+		<li><a href="https://pdos.csail.mit.edu/6.828/2021/xv6.html">xv6</a></li>
+		<li><a href="https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf">xv6 book</a></li>
+	      </ul>
+	    </li>
+	    <li><a href="https://pdos.csail.mit.edu/6.828/2021/reference.html">References</a></li>  
+	    <li><a href="https://piazza.com/mit/fall2021/6s081">Piazza</a></li>
+          </ul>
+	  <ul class="nav navbar-nav navbar-right">
+	    <p class="navbar-text">2021</p>
+	  </ul>
+        </div>
+      </div>
+    </div>
+
+
+<div class="container">
+
+
+
+
+
+<style type="text/css">
+.l {
+	margin-left: 4em;
+}
+</style>
+
+<script type="text/javascript">
+function unfoldinstrux(unfold) {
+  var e = document.getElementById("installinstrux");
+  e.className = unfold ? "foldo" : "foldc";
+}
+</script>
+
+<h1>
+Tools Used in 6.S081
+</h1>
+
+<p>For this class you'll need the RISC-V versions of a couple different tools:
+QEMU 5.1+, GDB 8.3+, GCC, and Binutils.</p>
+
+<p>If you are having trouble getting things set up, please come by to office
+hours or post on Piazza. We're happy to help!</p>
+
+<h3>Installing on Windows</h3>
+<p>First make sure you have the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux</a> installed. Then add <a href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6">Ubuntu 20.04 from the Microsoft Store</a>. Afterwards you should be able to launch Ubuntu and interact with the machine. To install all the software you need for this class, run:</p>
+
+<pre>$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
+$ sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu
+</pre>
+
+<p>From Windows, you can access all of your WSL files under the <i>"\\wsl$\"</i>
+directory. For instance, the home directory for an Ubuntu 20.04 installation should
+be at <i>"\\wsl$\Ubuntu-20.04\home\&lt;username&gt;\"</i>. </p><p>
+
+</p><h3>Installing on macOS</h3>
+
+<p>First, install developer tools:
+
+</p><pre>$ xcode-select --install
+</pre>
+
+<p>Next, install <a href="https://brew.sh/">Homebrew</a>, a package manager for macOS:
+
+</p><pre>$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</pre>
+
+<p>Next, install the <a href="https://github.com/riscv/homebrew-riscv">RISC-V compiler toolchain</a>:
+
+</p><pre>$ brew tap riscv/riscv
+$ brew install riscv-tools
+</pre>
+
+<p>The brew formula may not link into <tt>/usr/local</tt>. You will need to
+update your shell's rc file (e.g. <a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html">~/.bashrc</a>)
+to add the appropriate directory to <a href="http://www.linfo.org/path_env_var.html">$PATH</a>.
+
+</p><pre>PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
+</pre>
+
+<p>Finally, install QEMU:
+
+</p><pre>brew install qemu
+</pre>
+
+<h3>Debian or Ubuntu</h3>
+<pre>sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu </pre>
+
+<h3>Arch Linux</h3>
+<pre>sudo pacman -S riscv64-linux-gnu-binutils riscv64-linux-gnu-gcc riscv64-linux-gnu-gdb qemu-arch-extra</pre>
+
+<h3>Running a Linux VM</h3>
+<p>If the other options listed don't work, you can also try running a virtual
+  machine with one of the other operating systems listed above. With platform
+  virtualization, Linux can run alongside your normal computing environment.
+  Installing a Linux virtual machine is a two step process.  First, you download
+  the virtualization platform.</p>
+
+  <ul><li><a href="https://www.virtualbox.org/"><strong>VirtualBox</strong></a>
+  (free for Mac, Linux, Windows) — <a href="https://www.virtualbox.org/wiki/Downloads">Download
+  page</a></li>
+  <li><a href="http://www.vmware.com/products/player/">VMware
+  Player</a> (free for Linux and Windows, registration required)</li>
+  <li><a href="http://www.vmware.com/products/fusion/">VMware
+  Fusion</a> (Downloadable from IS&amp;T for free).
+  </li></ul>
+
+  <p>VirtualBox is a little slower and less flexible, but free!</p>
+
+  <p>Once the virtualization platform is installed, download a boot
+  disk image for the Linux distribution of your choice.</p>
+
+  <ul><li><a href="http://www.ubuntu.com/download/desktop">Ubuntu
+  Desktop</a> is one option.</li>
+  </ul>
+
+  <p>This will download a file named something like
+  <tt>ubuntu-20.04.3-desktop-amd64.iso</tt>.  Start up your
+  virtualization platform and create a new (64-bit) virtual machine.
+  Use the downloaded Ubuntu image as a boot disk; the
+  procedure differs among VMs but shouldn't be too difficult.
+</p>
+
+<h3>Athena</h3>
+<p>We don't recommend it since it can be somewhat inconvenient, but you can use
+athena.dialup.mit.edu to work on the labs. If you use the MIT Athena machines
+that run Linux, then all of these tools are located in the 6.828 locker.
+
+</p><p>ssh into one of the Athena dialup machines and add the tools:
+
+</p><pre>$ ssh {your kerberos}@athena.dialup.mit.edu
+$ add -f 6.828
+</pre>
+
+<h2> Testing your Installation </h2>
+<p>To test your installation, you should be able to compile and run xv6 (to quit qemu type Ctrl-a x):</p>
+
+<pre># in the xv6 directory
+$ make qemu
+# ... lots of output ...
+init: starting sh
+$
+</pre>
+
+<p>If that doesn't work, you can double check individual components. Which include QEMU:</p>
+
+<pre>$ qemu-system-riscv64 --version
+QEMU emulator version 5.1.0
+</pre>
+
+<p>And at least one RISC-V version of GCC:</p>
+
+<pre>$ riscv64-linux-gnu-gcc --version
+riscv64-linux-gnu-gcc (Debian 10.3.0-8) 10.3.0
+...
+</pre>
+
+<pre>$ riscv64-unknown-elf-gcc --version
+riscv64-unknown-elf-gcc (GCC) 10.1.0
+...
+</pre>
+
+<pre>$ riscv64-unknown-linux-gnu-gcc --version
+riscv64-unknown-linux-gnu-gcc (GCC) 10.1.0
+...
+</pre>
+
+<!-- End Page Content -->
+
+<hr/>
+
+<font style="font-size: 12px;">
+<p>Questions or comments regarding S6.081?  Send e-mail to the course staff at
+<a href="mailto:6s081@lists.csail.mit.edu"><i>6S081@lists.csail.mit.edu</i></a>.
+
+</p></font><p><font style="font-size: 12px;"><a href="https://creativecommons.org/licenses/by/3.0/us/" rel="license"><img alt="Creative Commons License" src="../assets/5b0302e13e7f.png" style="border-width:0"/></a> <b><a href="#top">Top</a></b> //
+<b><a href="https://pdos.csail.mit.edu/6.828/2021/index.html">S6.081 home</a></b> // 
+<i>Last updated Thursday, 04-Sep-2025 23:15:04 EDT</i>
+</font>
+
+</p></div>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+</body></html><!--  LocalWords:  Cygwin cygwin Toolchain Linuxes BSDs toolchain gcc ld jos cd
+ --><!--  LocalWords:  objdump conf GCCPREFIX linux binutils libstdc GNUmakefile sh
+ --><!--  LocalWords:  Bochs athena scp username bochs prebuilt wget xzvf
+ --><!--  LocalWords:  disasm
+ -->

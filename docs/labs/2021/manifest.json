@@ -1,0 +1,96 @@
+{
+  "download_date": "2026-10-25",
+  "schedule_source": "https://pdos.csail.mit.edu/6.828/2021/schedule.html",
+  "documents": [
+    {
+      "name": "util",
+      "title": "Lab util: Unix utilities",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/util.html",
+      "raw_sha256": "b5f5adff0b30620bced15e59f057b2d803cb01eadf756b622b6b9b9f95f1026e",
+      "raw_bytes": 20095
+    },
+    {
+      "name": "syscall",
+      "title": "Lab syscall: System calls",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/syscall.html",
+      "raw_sha256": "00c904294a37129dfdd6dbafef8eedc7934f9bbc33ba31951bccac4d83cdebac",
+      "raw_bytes": 10316
+    },
+    {
+      "name": "pgtbl",
+      "title": "Lab pgtbl: Page tables",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/pgtbl.html",
+      "raw_sha256": "4286e0186b79f30fc6a31e78082c74b503b80247d8363e7aa46c171b4b5059dd",
+      "raw_bytes": 11051
+    },
+    {
+      "name": "traps",
+      "title": "Lab traps: Traps",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/traps.html",
+      "raw_sha256": "6035d2b8f4616a7703dd907ae6b43b6349a268a2c066ded30828a835f0e5ba4f",
+      "raw_bytes": 15782
+    },
+    {
+      "name": "cow",
+      "title": "Lab cow: Copy-on-write fork",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/cow.html",
+      "raw_sha256": "04ca852ef1a7d2e82a94b4e9805a72c8ed477ca691d8da3e2b9d4596e97c8d8d",
+      "raw_bytes": 8992
+    },
+    {
+      "name": "thread",
+      "title": "Lab thread: Multithreading",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/thread.html",
+      "raw_sha256": "e35db50a3ce7e0662657ebf32a77f04e7a46e2c6dcff0305212e74886c2763b1",
+      "raw_bytes": 17004
+    },
+    {
+      "name": "net",
+      "title": "Lab net: Network driver",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/net.html",
+      "raw_sha256": "b4dbbaa1ff7ce6fc068fce27c8107b73aaa0fca511cb73b0d17169f53d7bfe45",
+      "raw_bytes": 19141
+    },
+    {
+      "name": "lock",
+      "title": "Lab lock: Parallelism/locking",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/lock.html",
+      "raw_sha256": "40c11166148dd1e9be9b55385080eb89c10fdd9956650867665498200395c603",
+      "raw_bytes": 16190
+    },
+    {
+      "name": "fs",
+      "title": "Lab fs: File system",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/fs.html",
+      "raw_sha256": "7ef7bdb4db90dcfadfe867219b96b2bc9add126017ef6ab9bda464f01c7f443c",
+      "raw_bytes": 12938
+    },
+    {
+      "name": "mmap",
+      "title": "Lab mmap: Mmap",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/mmap.html",
+      "raw_sha256": "84735a62ae2659edef7f92947ff6122009ca1ed96c43ab873837f3919adae8f6",
+      "raw_bytes": 12262
+    },
+    {
+      "name": "tools",
+      "title": "Tools Used in 6.S081",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/tools.html",
+      "raw_sha256": "bcecdf84c8e54c09502884aaa120ae19609798964473a566ab12591f954c5e6d",
+      "raw_bytes": 9291
+    },
+    {
+      "name": "guidance",
+      "title": "Lab guidance",
+      "source": "https://pdos.csail.mit.edu/6.828/2021/labs/guidance.html",
+      "raw_sha256": "d6da4a84dd9fb591fbac00ab8f0d0332edf19e910d1a9d946e2ff9af48751c54",
+      "raw_bytes": 7310
+    }
+  ],
+  "assets": {
+    "https://pdos.csail.mit.edu/6.828/2021/labs/labs.css": "assets/3da2124c9398.css",
+    "https://i.creativecommons.org/l/by/3.0/us/88x31.png": "assets/5b0302e13e7f.png",
+    "https://pdos.csail.mit.edu/6.828/2021/css/bootstrap.min.css": "assets/f336a65d7684.css",
+    "https://pdos.csail.mit.edu/6.828/2021/css/style.css": "assets/cff30969aeb1.css"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "C_Cpp.default.compilerPath": "/usr/bin/riscv64-linux-gnu-gcc",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}"
+  ],
+  "C_Cpp.default.cStandard": "c99",
+  "files.associations": {
+    "*.h": "c"
+  },
+  "C_Cpp.default.compilerArgs": [
+    "-mcmodel=medany",
+    "-ffreestanding",
+    "-nostdlib"
+  ],
+  "C_Cpp.intelliSenseEngine": "default"
+}
